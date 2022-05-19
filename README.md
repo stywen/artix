@@ -309,6 +309,23 @@ echo "gaps outer 5" >> ~/.config/i3/config
 echo "default_border pixel 3">> ~/.config/i3/config
 ```
 
+### Qemu
+```
+sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libvirt-openrc
+sudo rc-update add libvirtd
+sudo vim /etc/libvirt/libvirtd.conf
+sudo usermod -aG libvirt stywen
+
+# uncomment the following lines
+unix_sock_group = "libvirt"
+unix_sock_ro_perms = "0777"
+unix_sock_rw_perms = "0770"
+
+# reboot
+sudo rc-service libvirtd restart
+```
+
+
 
 # Wayland
 ## install and setup wayland
