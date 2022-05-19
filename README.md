@@ -282,7 +282,7 @@ sudo chown stywen /GameLibrary
 rm -rf /GameLibrary/lost*
 ```
 
-#### install winde and lutris
+#### install wine and lutris
 
 
 ```
@@ -324,7 +324,7 @@ unix_sock_rw_perms = "0770"
 # reboot
 sudo rc-service libvirtd restart
 ```
-
+enable XML editing in the GUI (virt-man)
 
 
 # Wayland
