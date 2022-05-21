@@ -144,12 +144,16 @@ echo "suecyde-machine" > /etc/hostname
 ### install essential packages like dhcpcd and ssh
 
 ```
-pacman -S dhcpcd-openrc
-pacman -S openssh-openrc
-pacman -S connman-openrc
+pacman -S dhcpcd-openrc openssh-openrc connman-openrc
+```
 
+```
 rc-update add connmand
+```
+```
 rc-update add dhcpcd
+```
+```
 rc-update add sshd
 ```
 
