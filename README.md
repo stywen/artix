@@ -42,7 +42,7 @@ wipefs -a /dev/nvme1n1
 ```
 
 
-Now you have to create partitions, i choose the following partitioning scheme:
+Now you have to create partitions, i choose the following partitioning scheme (when working with cfdisk make sure type ist GPT except if you are doing it on a VM then choose DOS):
 
 - partition 1 boot 128M
 - parititon 2 root 15G
@@ -121,6 +121,10 @@ locale-gen
  pacman -S grub os-prober efibootmgr
  grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub   
  grub-mkconfig -o /boot/grub/grub.cfg
+ 
+grub-install --recheck /dev/sda                # for BIOS systems (Qemu VMs)
+
+
 ```
 
 ### creating a new user and adding it to sudoers
