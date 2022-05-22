@@ -83,7 +83,7 @@ Now the corresponding folders need to be created and mounted to the specific par
 
 Start to install the base system and handy applications
 ```
-basestrap /mnt base base-devel openrc elogind-openrc linux linux-firmware intel-ucode git zsh vim
+basestrap /mnt base base-devel openrc elogind-openrc linux linux-firmware intel-ucode git zsh vim feh
 ```
 
 ### Generate a new fstab file with the integrated fstabgen script 
